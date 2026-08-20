@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# キーの雛形（値は空）はチーム共有したいので除外の例外にする
+!.env.local.example
