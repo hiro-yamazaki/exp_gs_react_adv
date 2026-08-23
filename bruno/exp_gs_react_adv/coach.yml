@@ -1,0 +1,22 @@
+info:
+  name: " coach"
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:3000/api/coach
+  body:
+    type: json
+    data: |-
+      {
+        "topic": "自己紹介をしてください",
+        "answer": "山崎です。営業を10年やってきました。"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
