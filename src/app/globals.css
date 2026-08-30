@@ -12,6 +12,23 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* ---- 白銀比スケール（1 : √2 ≈ 1.414）----
+   基準 1rem(16px) を √2 倍・√2 分の1 で並べる。
+   文字サイズは text-s*、余白は p-s* / mt-s* / gap-s* として使える。 */
+@theme {
+  --text-s-1: 0.707rem;   /* 11.3px 補足・キャプション */
+  --text-s0: 1rem;        /* 16px   本文 */
+  --text-s1: 1.414rem;    /* 22.6px 小見出し */
+  --text-s2: 2rem;        /* 32px   見出し */
+
+  --spacing-s-1: 0.5rem;   /* 8px   最小の隙間 */
+  --spacing-s0: 0.707rem;  /* 11.3px 要素内の余白 */
+  --spacing-s1: 1rem;      /* 16px  要素間 */
+  --spacing-s2: 1.414rem;  /* 22.6px ブロック間 */
+  --spacing-s3: 2rem;      /* 32px  セクション間 */
+  --spacing-s4: 2.828rem;  /* 45px  ページ上下 */
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -22,5 +39,8 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* 日本語が読みやすいフォント順。行間 1.7・字間 0.02em は和文の定番 */
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
 }
